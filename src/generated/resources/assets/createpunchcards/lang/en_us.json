@@ -1,6 +1,6 @@
 {
-  "block.createpunchcards.createpunchcards_generator_block": "Createpunchcards Generator Block",
-  "block.createpunchcards.createpunchcards_kinetic_block": "Createpunchcards Kinetic Block",
+  "block.createpunchcards.computer_block": "Computer Block",
+  "block.createpunchcards.drum_block": "Drum Block",
   "createpunchcards.ponder.createpunchcards_ponder.header": "Welcome to the Example Addon",
   "createpunchcards.ponder.createpunchcards_ponder.text_1": "Every block here is loaded from createpunchcards_ponder.nbt",
   "createpunchcards.ponder.createpunchcards_ponder.text_2": "Block entities like this sign render and tick just as they do in-world",
@@ -11,12 +11,11 @@
   "gui.createpunchcards.createpunchcards_kinetic.consuming": "Drawing stress",
   "gui.createpunchcards.rpm": "%s RPM",
   "gui.createpunchcards.su": "%s SU",
-  "item.createpunchcards.createpunchcards_item": "Createpunchcards Item",
   "item.createpunchcards.createpunchcards_item.tooltip.behaviour1": "Reveals this description, powered by Create's _ItemDescription_ tooltip system.",
   "item.createpunchcards.createpunchcards_item.tooltip.condition1": "When Held",
   "item.createpunchcards.createpunchcards_item.tooltip.summary": "A showcase item for the _Example Addon_.",
-  "item.createpunchcards.createpunchcards_result": "Createpunchcards Result",
-  "item.createpunchcards.incomplete_example": "Incomplete Example",
+  "item.createpunchcards.incomplete_punch_card": "Incomplete Punch Card",
+  "item.createpunchcards.punch_card": "Punch Card",
   "itemGroup.createpunchcards": "Create: Punch Cards",
   "itemGroup.createpunchcards.main_tab": "Main Tab"
 }

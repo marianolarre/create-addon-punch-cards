@@ -12,25 +12,14 @@ import net.minecraft.world.item.Item;
  */
 public class AllItems {
 
-    public static final ItemEntry<Item> EXAMPLE_ITEM = CreatePunchCards.REGISTRATE
-            .item("createpunchcards_item", Item::new)
-            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.withDefaultNamespace("item/amethyst_shard")))
+    public static final ItemEntry<Item> PUNCH_CARD = CreatePunchCards.REGISTRATE
+            .item("punch_card", Item::new)
+            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.fromNamespaceAndPath("createpunchcards", "item/punch_card")))
             .register();
 
-    /**
-     * Output of the sequenced assembly and several other example recipes.
-     */
-    public static final ItemEntry<Item> EXAMPLE_RESULT = CreatePunchCards.REGISTRATE
-            .item("createpunchcards_result", Item::new)
-            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.withDefaultNamespace("item/netherite_ingot")))
-            .register();
-
-    /**
-     * Transitional item carried between the steps of the sequenced assembly recipe.
-     */
-    public static final ItemEntry<Item> INCOMPLETE_EXAMPLE = CreatePunchCards.REGISTRATE
-            .item("incomplete_example", Item::new)
-            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.withDefaultNamespace("item/brick")))
+    public static final ItemEntry<Item> INCOMPLETE_PUNCH_CARD = CreatePunchCards.REGISTRATE
+            .item("incomplete_punch_card", Item::new)
+            .model((c, p) -> p.generated(c::getEntry, ResourceLocation.fromNamespaceAndPath("createpunchcards", "item/incomplete_punch_card")))
             .register();
 
     public static void register() {

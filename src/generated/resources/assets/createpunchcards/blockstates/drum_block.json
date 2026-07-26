@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "createpunchcards:block/drum_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "createpunchcards:block/drum_block"
+    },
+    "axis=z": {
+      "model": "createpunchcards:block/drum_block",
+      "x": 90,
+      "y": 180
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "block.createpunchcards.createpunchcards_generator_block": "ʞɔoןᗺ ɹoʇɐɹǝuǝ⅁ spɹɐɔɥɔundǝʇɐǝɹƆ",
-  "block.createpunchcards.createpunchcards_kinetic_block": "ʞɔoןᗺ ɔıʇǝuıʞ spɹɐɔɥɔundǝʇɐǝɹƆ",
+  "block.createpunchcards.computer_block": "ʞɔoןᗺ ɹǝʇndɯoƆ",
+  "block.createpunchcards.drum_block": "ʞɔoןᗺ ɯnɹᗡ",
   "createpunchcards.ponder.createpunchcards_ponder.header": "uoppⱯ ǝןdɯɐxƎ ǝɥʇ oʇ ǝɯoɔןǝM",
   "createpunchcards.ponder.createpunchcards_ponder.text_1": "ʇqu˙ɹǝpuod‾spɹɐɔɥɔundǝʇɐǝɹɔ ɯoɹɟ pǝpɐoן sı ǝɹǝɥ ʞɔoןq ʎɹǝʌƎ",
   "createpunchcards.ponder.createpunchcards_ponder.text_2": "pןɹoʍ-uı op ʎǝɥʇ sɐ ʇsnظ ʞɔıʇ puɐ ɹǝpuǝɹ ubıs sıɥʇ ǝʞıן sǝıʇıʇuǝ ʞɔoןᗺ",
@@ -11,12 +11,11 @@
   "gui.createpunchcards.createpunchcards_kinetic.consuming": "ssǝɹʇs buıʍɐɹᗡ",
   "gui.createpunchcards.rpm": "WԀᴚ %s",
   "gui.createpunchcards.su": "∩S %s",
-  "item.createpunchcards.createpunchcards_item": "ɯǝʇI spɹɐɔɥɔundǝʇɐǝɹƆ",
   "item.createpunchcards.createpunchcards_item.tooltip.behaviour1": "˙ɯǝʇsʎs dıʇןooʇ ‾uoıʇdıɹɔsǝᗡɯǝʇI‾ s,ǝʇɐǝɹƆ ʎq pǝɹǝʍod 'uoıʇdıɹɔsǝp sıɥʇ sןɐǝʌǝᴚ",
   "item.createpunchcards.createpunchcards_item.tooltip.condition1": "pןǝH uǝɥM",
   "item.createpunchcards.createpunchcards_item.tooltip.summary": "˙‾uoppⱯ ǝןdɯɐxƎ‾ ǝɥʇ ɹoɟ ɯǝʇı ǝsɐɔʍoɥs Ɐ",
-  "item.createpunchcards.createpunchcards_result": "ʇןnsǝᴚ spɹɐɔɥɔundǝʇɐǝɹƆ",
-  "item.createpunchcards.incomplete_example": "ǝןdɯɐxƎ ǝʇǝןdɯoɔuI",
+  "item.createpunchcards.incomplete_punch_card": "pɹɐƆ ɥɔunԀ ǝʇǝןdɯoɔuI",
+  "item.createpunchcards.punch_card": "pɹɐƆ ɥɔunԀ",
   "itemGroup.createpunchcards": "spɹɐƆ ɥɔunԀ :ǝʇɐǝɹƆ",
   "itemGroup.createpunchcards.main_tab": "qɐ⟘ uıɐW"
 }

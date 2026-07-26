@@ -3,19 +3,8 @@ package com.example.createpunchcards;
 import java.util.concurrent.CompletableFuture;
 
 import com.example.createpunchcards.content.ponder.CreatePunchCardsPonderPlugin;
-import com.example.createpunchcards.datagen.CreatePunchCardsCompactingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsCrushingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsCuttingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsDeployingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsEmptyingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsFillingRecipeGen;
 import com.example.createpunchcards.datagen.CreatePunchCardsLangMerger;
-import com.example.createpunchcards.datagen.CreatePunchCardsHauntingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsMillingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsMixingRecipeGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsPressingRecipeGen;
 import com.example.createpunchcards.datagen.CreatePunchCardsSequencedAssemblyGen;
-import com.example.createpunchcards.datagen.CreatePunchCardsWashingRecipeGen;
 import com.simibubi.create.content.kinetics.base.ShaftVisual;
 import com.tterrag.registrate.providers.ProviderType;
 import net.createmod.ponder.foundation.PonderIndex;
@@ -115,16 +104,5 @@ public class CreatePunchCards {
         CompletableFuture<HolderLookup.Provider> registries = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new CreatePunchCardsSequencedAssemblyGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsWashingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsHauntingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsCrushingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsMillingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsPressingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsCuttingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsMixingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsCompactingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsFillingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsEmptyingRecipeGen(output, registries));
-        generator.addProvider(event.includeServer(), new CreatePunchCardsDeployingRecipeGen(output, registries));
     }
 }

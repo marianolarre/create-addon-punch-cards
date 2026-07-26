@@ -38,6 +38,6 @@ public class CreatePunchCardsKineticBlock extends RotatedPillarKineticBlock impl
 
     @Override
     public BlockEntityType<? extends CreatePunchCardsKineticBlockEntity> getBlockEntityType() {
-        return AllBlockEntityTypes.EXAMPLE_KINETIC.get();
+        return AllBlockEntityTypes.DRUM_BLOCK_ENTITY.get();
     }
 }

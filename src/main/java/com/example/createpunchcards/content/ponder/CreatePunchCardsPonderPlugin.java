@@ -22,7 +22,7 @@ public class CreatePunchCardsPonderPlugin implements PonderPlugin {
 
     @Override
     public void registerScenes(PonderSceneRegistrationHelper<ResourceLocation> helper) {
-        helper.forComponents(AllBlocks.EXAMPLE_KINETIC_BLOCK.getId())
+        helper.forComponents(AllBlocks.DRUM_BLOCK.getId())
                 .addStoryBoard("createpunchcards_ponder", CreatePunchCardsPonderScenes::examplePonder);
     }
 }

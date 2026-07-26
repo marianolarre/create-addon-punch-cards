@@ -1,12 +1,12 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "minecraft:iron_ingot"
+    "item": "create:cardboard"
   },
-  "loops": 2,
+  "loops": 6,
   "results": [
     {
-      "id": "createpunchcards:createpunchcards_result"
+      "id": "createpunchcards:punch_card"
     }
   ],
   "sequence": [
@@ -14,15 +14,15 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "createpunchcards:incomplete_example"
+          "item": "createpunchcards:incomplete_punch_card"
         },
         {
-          "item": "minecraft:copper_ingot"
+          "item": "create:cardboard"
         }
       ],
       "results": [
         {
-          "id": "createpunchcards:incomplete_example"
+          "id": "createpunchcards:incomplete_punch_card"
         }
       ]
     },
@@ -30,17 +30,17 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "createpunchcards:incomplete_example"
+          "item": "createpunchcards:incomplete_punch_card"
         }
       ],
       "results": [
         {
-          "id": "createpunchcards:incomplete_example"
+          "id": "createpunchcards:incomplete_punch_card"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "createpunchcards:incomplete_example"
+    "id": "createpunchcards:incomplete_punch_card"
   }
 }

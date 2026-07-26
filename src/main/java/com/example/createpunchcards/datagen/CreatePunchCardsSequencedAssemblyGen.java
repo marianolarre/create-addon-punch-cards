@@ -6,8 +6,8 @@ import com.example.createpunchcards.AllItems;
 import com.example.createpunchcards.CreatePunchCards;
 import com.simibubi.create.api.data.recipe.BaseRecipeProvider.GeneratedRecipe;
 import com.simibubi.create.api.data.recipe.SequencedAssemblyRecipeGen;
-import com.simibubi.create.content.kinetics.deployer.DeployerApplicationRecipe;
 import com.simibubi.create.content.kinetics.press.PressingRecipe;
+import com.simibubi.create.content.kinetics.deployer.DeployerApplicationRecipe;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -21,11 +21,11 @@ import net.minecraft.world.item.Items;
 public class CreatePunchCardsSequencedAssemblyGen extends SequencedAssemblyRecipeGen {
 
     GeneratedRecipe EXAMPLE = create("createpunchcards_result", b -> b
-            .require(Items.IRON_INGOT)
-            .transitionTo(AllItems.INCOMPLETE_EXAMPLE.get())
-            .addOutput(AllItems.EXAMPLE_RESULT.get(), 1f)
-            .loops(2)
-            .addStep(DeployerApplicationRecipe::new, rb -> rb.require(Items.COPPER_INGOT))
+            .require(com.simibubi.create.AllItems.CARDBOARD)
+            .transitionTo(AllItems.INCOMPLETE_PUNCH_CARD.get())
+            .addOutput(AllItems.PUNCH_CARD.get(), 1f)
+            .loops(6)
+            .addStep(DeployerApplicationRecipe::new, rb -> rb.require(com.simibubi.create.AllItems.CARDBOARD))
             .addStep(PressingRecipe::new, rb -> rb));
 
     public CreatePunchCardsSequencedAssemblyGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
