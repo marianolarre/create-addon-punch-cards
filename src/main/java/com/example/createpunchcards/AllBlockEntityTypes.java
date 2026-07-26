@@ -3,11 +3,11 @@ package com.example.createpunchcards;
 import com.example.createpunchcards.content.kinetics.ComputerBlock;
 import com.example.createpunchcards.content.kinetics.ComputerBlockEntity;
 import com.example.createpunchcards.content.kinetics.ComputerRenderer;
-import com.example.createpunchcards.content.kinetics.CreatePunchCardsShaftRenderer;
 import com.example.createpunchcards.content.kinetics.DrumBlockEntity;
+import com.example.createpunchcards.content.kinetics.DrumRenderer;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.OrientedRotatingVisual;
-import com.simibubi.create.content.kinetics.base.ShaftVisual;
+import com.simibubi.create.content.kinetics.base.SingleAxisRotatingVisual;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 
 import dev.engine_room.flywheel.lib.model.Models;
@@ -31,11 +31,10 @@ public class AllBlockEntityTypes {
 
     public static final BlockEntityEntry<DrumBlockEntity> DRUM_BLOCK_ENTITY = CreatePunchCards.REGISTRATE
             .blockEntity("drum_block_entity", DrumBlockEntity::new)
-            // visual for flywheel renderer
-            .visual(() -> ShaftVisual::new)
+            .visual(() -> (context, be, pt) ->
+                    new SingleAxisRotatingVisual<>(context, be, pt, Models.block(be.getBlockState())), false)
             .validBlock(AllBlocks.DRUM_BLOCK)
-            // fallback renderer if flywheel is not available
-            .renderer(() -> CreatePunchCardsShaftRenderer::new)
+            .renderer(() -> DrumRenderer::new)
             .register();
 
     public static void register() {
