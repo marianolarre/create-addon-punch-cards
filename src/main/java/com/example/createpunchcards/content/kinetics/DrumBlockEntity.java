@@ -29,6 +29,24 @@ public class DrumBlockEntity extends KineticBlockEntity {
         return DrumComputerKinetics.STUB_TARGET_RPM;
     }
 
+    @Override
+    public boolean isCustomConnection(KineticBlockEntity other, BlockState state, BlockState otherState) {
+        if (!(other instanceof ComputerBlockEntity))
+            return false;
+        if (!other.getBlockPos().equals(worldPosition.below()))
+            return false;
+        return DrumComputerKinetics.axesAligned(
+                state.getValue(DrumBlock.AXIS).getSerializedName(),
+                ComputerBlock.getShaftFacing(otherState).getAxis().getSerializedName());
+    }
+
+    @Override
+    public float propagateRotationTo(KineticBlockEntity target, BlockState stateFrom, BlockState stateTo, BlockPos diff,
+            boolean connectedViaAxes, boolean connectedViaCogs) {
+        // Computer is the source; do not push speed downward from the drum.
+        return 0;
+    }
+
     /**
      * Adds custom lines to the Engineer's Goggles overlay. Calling super keeps the base
      * kinetic stress readout, then we append the SU this block is drawing at its current
