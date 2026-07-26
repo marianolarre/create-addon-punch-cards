@@ -1,0 +1,22 @@
+{
+  "block.createpunchcards.createpunchcards_generator_block": "ʞɔoןᗺ ɹoʇɐɹǝuǝ⅁ spɹɐɔɥɔundǝʇɐǝɹƆ",
+  "block.createpunchcards.createpunchcards_kinetic_block": "ʞɔoןᗺ ɔıʇǝuıʞ spɹɐɔɥɔundǝʇɐǝɹƆ",
+  "createpunchcards.ponder.createpunchcards_ponder.header": "uoppⱯ ǝןdɯɐxƎ ǝɥʇ oʇ ǝɯoɔןǝM",
+  "createpunchcards.ponder.createpunchcards_ponder.text_1": "ʇqu˙ɹǝpuod‾spɹɐɔɥɔundǝʇɐǝɹɔ ɯoɹɟ pǝpɐoן sı ǝɹǝɥ ʞɔoןq ʎɹǝʌƎ",
+  "createpunchcards.ponder.createpunchcards_ponder.text_2": "pןɹoʍ-uı op ʎǝɥʇ sɐ ʇsnظ ʞɔıʇ puɐ ɹǝpuǝɹ ubıs sıɥʇ ǝʞıן sǝıʇıʇuǝ ʞɔoןᗺ",
+  "createpunchcards.ponder.createpunchcards_ponder.text_3": "ooʇ ʞɹoʍ sʞɔoןq uʍo s,ǝʇɐǝɹƆ buıʌoɹd 'ubıs ǝɥʇ ʞuɐןɟ sɯɹⱯ ןɐɔıuɐɥɔǝW oʍ⟘",
+  "createpunchcards.ponder.createpunchcards_ponder.text_4": "sʞɔoןq uıɐʇɹǝɔ oʇ spǝǝds ɔıʇǝuıʞ ʎןddɐ osןɐ uɐɔ noʎ",
+  "display_source.createpunchcards.createpunchcards_source": "pǝǝdS ɔıʇǝuıʞ",
+  "gui.createpunchcards.createpunchcards_generator.generating": "uoıʇɐʇoɹ buıʇɐɹǝuǝ⅁",
+  "gui.createpunchcards.createpunchcards_kinetic.consuming": "ssǝɹʇs buıʍɐɹᗡ",
+  "gui.createpunchcards.rpm": "WԀᴚ %s",
+  "gui.createpunchcards.su": "∩S %s",
+  "item.createpunchcards.createpunchcards_item": "ɯǝʇI spɹɐɔɥɔundǝʇɐǝɹƆ",
+  "item.createpunchcards.createpunchcards_item.tooltip.behaviour1": "˙ɯǝʇsʎs dıʇןooʇ ‾uoıʇdıɹɔsǝᗡɯǝʇI‾ s,ǝʇɐǝɹƆ ʎq pǝɹǝʍod 'uoıʇdıɹɔsǝp sıɥʇ sןɐǝʌǝᴚ",
+  "item.createpunchcards.createpunchcards_item.tooltip.condition1": "pןǝH uǝɥM",
+  "item.createpunchcards.createpunchcards_item.tooltip.summary": "˙‾uoppⱯ ǝןdɯɐxƎ‾ ǝɥʇ ɹoɟ ɯǝʇı ǝsɐɔʍoɥs Ɐ",
+  "item.createpunchcards.createpunchcards_result": "ʇןnsǝᴚ spɹɐɔɥɔundǝʇɐǝɹƆ",
+  "item.createpunchcards.incomplete_example": "ǝןdɯɐxƎ ǝʇǝןdɯoɔuI",
+  "itemGroup.createpunchcards": "spɹɐƆ ɥɔunԀ :ǝʇɐǝɹƆ",
+  "itemGroup.createpunchcards.main_tab": "qɐ⟘ uıɐW"
+}

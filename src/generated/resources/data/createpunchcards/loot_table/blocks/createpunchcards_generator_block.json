@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "createpunchcards:createpunchcards_generator_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "createpunchcards:blocks/createpunchcards_generator_block"
+}

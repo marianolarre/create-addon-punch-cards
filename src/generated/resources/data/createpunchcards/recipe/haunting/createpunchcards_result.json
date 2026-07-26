@@ -1,0 +1,13 @@
+{
+  "type": "create:haunting",
+  "ingredients": [
+    {
+      "item": "createpunchcards:createpunchcards_item"
+    }
+  ],
+  "results": [
+    {
+      "id": "createpunchcards:createpunchcards_result"
+    }
+  ]
+}
