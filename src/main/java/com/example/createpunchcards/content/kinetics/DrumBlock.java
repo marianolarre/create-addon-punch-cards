@@ -9,9 +9,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -24,6 +26,15 @@ public class DrumBlock extends RotatedPillarKineticBlock implements IBE<DrumBloc
     }
 
     @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState below = context.getLevel().getBlockState(context.getClickedPos().below());
+        if (below.getBlock() instanceof ComputerBlock computer
+                && (context.getPlayer() == null || !context.getPlayer().isShiftKeyDown()))
+            return defaultBlockState().setValue(AXIS, computer.getRotationAxis(below));
+        return super.getStateForPlacement(context);
+    }
+
+    @Override
     public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction face) {
         return false;
     }
@@ -31,6 +42,12 @@ public class DrumBlock extends RotatedPillarKineticBlock implements IBE<DrumBloc
     @Override
     public Direction.Axis getRotationAxis(BlockState state) {
         return state.getValue(AXIS);
+    }
+
+    /** Spinning visual is drawn by the BER / Flywheel; hide the static chunk mesh. */
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
     }
 
     @Override

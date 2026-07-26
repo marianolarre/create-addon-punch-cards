@@ -39,6 +39,18 @@ public class ComputerBlock extends HorizontalKineticBlock implements IBE<Compute
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
+        if (context.getPlayer() == null || !context.getPlayer().isShiftKeyDown()) {
+            BlockState above = context.getLevel().getBlockState(context.getClickedPos().above());
+            if (above.getBlock() instanceof DrumBlock) {
+                Direction.Axis drumAxis = above.getValue(DrumBlock.AXIS);
+                if (drumAxis.isHorizontal()) {
+                    Direction facing = context.getHorizontalDirection().getOpposite();
+                    if (getShaftFacing(defaultBlockState().setValue(HORIZONTAL_FACING, facing)).getAxis() != drumAxis)
+                        facing = facing.getClockWise();
+                    return defaultBlockState().setValue(HORIZONTAL_FACING, facing);
+                }
+            }
+        }
         Direction preferred = getPreferredHorizontalFacing(context);
         if (preferred != null)
             // preferred is the face that should get our shaft → facing whose left is that face

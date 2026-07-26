@@ -47,6 +47,7 @@ public class CreatePunchCards {
         AllItems.register();
         AllDisplaySources.register();
         AllBlocks.register();
+        AllPartialModels.register();
         AllBlockEntityTypes.register();
 
         modBus.addListener(this::onCommonSetup);
