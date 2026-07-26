@@ -1,7 +1,7 @@
 package com.example.createpunchcards;
 
 import com.example.createpunchcards.content.kinetics.ComputerBlock;
-import com.example.createpunchcards.content.kinetics.CreatePunchCardsKineticBlock;
+import com.example.createpunchcards.content.kinetics.DrumBlock;
 import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.foundation.data.BlockStateGen;
 import com.tterrag.registrate.util.entry.BlockEntry;
@@ -30,8 +30,8 @@ public class AllBlocks {
             .build()
             .register();
 
-    public static final BlockEntry<CreatePunchCardsKineticBlock> DRUM_BLOCK = CreatePunchCards.REGISTRATE
-            .block("drum_block", CreatePunchCardsKineticBlock::new)
+    public static final BlockEntry<DrumBlock> DRUM_BLOCK = CreatePunchCards.REGISTRATE
+            .block("drum_block", DrumBlock::new)
             .initialProperties(() -> Blocks.ANDESITE)
             .properties(p -> p.noOcclusion())
             .blockstate((ctx, prov) -> {

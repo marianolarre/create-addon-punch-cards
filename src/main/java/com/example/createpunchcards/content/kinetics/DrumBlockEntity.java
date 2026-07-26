@@ -12,18 +12,21 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * Block entity for the example kinetic block. Extending KineticBlockEntity ties it
- * into the kinetic network as a consumer. Its stress impact is registered in
- * CreatePunchCards (using STRESS_IMPACT below) rather than here, which keeps that value
- * configurable and lets it surface in tooltips.
+ * Block entity for the drum. Extending KineticBlockEntity ties it into the kinetic
+ * network as a consumer. Stress impact is registered in AllBlocks; goggle tooltip
+ * shows SU draw at current speed.
  */
-public class CreatePunchCardsKineticBlockEntity extends KineticBlockEntity {
+public class DrumBlockEntity extends KineticBlockEntity {
 
-    /** Stress Units this block draws per RPM. Registered as its impact in CreatePunchCards. */
+    /** Stress Units this block draws per RPM. Registered as its impact in AllBlocks. */
     public static final float STRESS_IMPACT = 8.0f;
 
-    public CreatePunchCardsKineticBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public DrumBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
+    }
+
+    public float computeTargetSpeed() {
+        return DrumComputerKinetics.STUB_TARGET_RPM;
     }
 
     /**

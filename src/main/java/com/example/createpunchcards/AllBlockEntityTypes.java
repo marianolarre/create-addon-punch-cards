@@ -3,8 +3,8 @@ package com.example.createpunchcards;
 import com.example.createpunchcards.content.kinetics.ComputerBlock;
 import com.example.createpunchcards.content.kinetics.ComputerBlockEntity;
 import com.example.createpunchcards.content.kinetics.ComputerRenderer;
-import com.example.createpunchcards.content.kinetics.CreatePunchCardsKineticBlockEntity;
 import com.example.createpunchcards.content.kinetics.CreatePunchCardsShaftRenderer;
+import com.example.createpunchcards.content.kinetics.DrumBlockEntity;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.OrientedRotatingVisual;
 import com.simibubi.create.content.kinetics.base.ShaftVisual;
@@ -29,8 +29,8 @@ public class AllBlockEntityTypes {
             .renderer(() -> ComputerRenderer::new)
             .register();
 
-    public static final BlockEntityEntry<CreatePunchCardsKineticBlockEntity> DRUM_BLOCK_ENTITY = CreatePunchCards.REGISTRATE
-            .blockEntity("drum_block_entity", CreatePunchCardsKineticBlockEntity::new)
+    public static final BlockEntityEntry<DrumBlockEntity> DRUM_BLOCK_ENTITY = CreatePunchCards.REGISTRATE
+            .blockEntity("drum_block_entity", DrumBlockEntity::new)
             // visual for flywheel renderer
             .visual(() -> ShaftVisual::new)
             .validBlock(AllBlocks.DRUM_BLOCK)
