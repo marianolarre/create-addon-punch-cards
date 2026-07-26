@@ -1,0 +1,10 @@
+{
+	"itemGroup.createpunchcards": "Create: Punch Cards",
+
+	"gui.createpunchcards.createpunchcards_generator.generating": "Generating rotation",
+	"gui.createpunchcards.createpunchcards_kinetic.consuming": "Drawing stress",
+	"gui.createpunchcards.rpm": "%s RPM",
+	"gui.createpunchcards.su": "%s SU",
+
+	"display_source.createpunchcards.createpunchcards_source": "Kinetic Speed"
+}

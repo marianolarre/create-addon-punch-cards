@@ -1,0 +1,28 @@
+{
+	"itemGroup.createpunchcards": "Beispiel Create-Erweiterung",
+	"itemGroup.createpunchcards.main_tab": "Hauptreiter",
+
+	"block.createpunchcards.createpunchcards_kinetic_block": "Beispiel-Kinetikblock",
+	"block.createpunchcards.createpunchcards_generator_block": "Beispiel-Generatorblock",
+
+	"item.createpunchcards.createpunchcards_item": "Beispielgegenstand",
+	"item.createpunchcards.createpunchcards_result": "Beispielergebnis",
+	"item.createpunchcards.incomplete_example": "Unvollständiges Beispiel",
+
+	"gui.createpunchcards.createpunchcards_generator.generating": "Erzeugt Rotation",
+	"gui.createpunchcards.createpunchcards_kinetic.consuming": "Verbraucht Belastung",
+	"gui.createpunchcards.rpm": "%s UPM",
+	"gui.createpunchcards.su": "%s SU",
+
+	"display_source.createpunchcards.createpunchcards_source": "Kinetische Geschwindigkeit",
+
+	"item.createpunchcards.createpunchcards_item.tooltip.summary": "Ein Vorführgegenstand für die _Beispiel-Erweiterung_.",
+	"item.createpunchcards.createpunchcards_item.tooltip.condition1": "Wenn gehalten",
+	"item.createpunchcards.createpunchcards_item.tooltip.behaviour1": "Zeigt diese Beschreibung – ermöglicht durch Creates _ItemDescription_-Tooltip-System.",
+
+	"createpunchcards.ponder.createpunchcards_ponder.header": "Willkommen bei der Beispiel-Erweiterung",
+	"createpunchcards.ponder.createpunchcards_ponder.text_1": "Jeder Block hier wird aus createpunchcards_ponder.nbt geladen",
+	"createpunchcards.ponder.createpunchcards_ponder.text_2": "Blockentitäten wie dieses Schild werden dargestellt und ticken wie in der Welt",
+	"createpunchcards.ponder.createpunchcards_ponder.text_3": "Zwei mechanische Arme flankieren das Schild und beweisen, dass auch Creates eigene Blöcke funktionieren",
+	"createpunchcards.ponder.createpunchcards_ponder.text_4": "Du kannst auch den blöcken rpm werte geben"
+}
