@@ -7,6 +7,9 @@ public class AllPartialModels {
     /** Y-up drum mesh for BER / Flywheel (block itself is ENTITYBLOCK_ANIMATED). */
     public static final PartialModel DRUM = PartialModel.of(CreatePunchCards.asResource("block/drum_block"));
 
+    /** Flat cog authored on the bottom face; face with partialFacingVertical / rotateToFace(UP, …). */
+    public static final PartialModel SLIM_COGWHEEL = PartialModel.of(CreatePunchCards.asResource("block/slim_cogwheel"));
+
     public static void register() {
         // Force class loading so PartialModel.of runs during client init.
     }

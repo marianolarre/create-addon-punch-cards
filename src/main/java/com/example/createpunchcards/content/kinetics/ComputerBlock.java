@@ -32,9 +32,12 @@ public class ComputerBlock extends HorizontalKineticBlock implements IBE<Compute
         super(properties);
     }
 
-    /** World face that accepts a shaft (left of {@link #HORIZONTAL_FACING}). */
     public static Direction getShaftFacing(BlockState state) {
         return state.getValue(HORIZONTAL_FACING).getCounterClockWise();
+    }
+
+    public static Direction getSlimCogFacing(BlockState state) {
+        return getShaftFacing(state);
     }
 
     @Override

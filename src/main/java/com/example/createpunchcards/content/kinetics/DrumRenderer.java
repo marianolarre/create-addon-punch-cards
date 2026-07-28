@@ -6,6 +6,7 @@ import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
 
 import dev.engine_room.flywheel.api.visualization.VisualizationManager;
 import dev.engine_room.flywheel.lib.transform.TransformStack;
+import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.math.AngleHelper;
 import net.createmod.catnip.render.CachedBuffers;
 import net.createmod.catnip.render.SuperByteBuffer;
@@ -17,7 +18,7 @@ import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.world.level.block.state.BlockState;
 
-/** Spins the drum from the BE's persisted angle. Model is authored along +X. */
+/** Spins the drum and visual-only slim cogs on both axis ends from the BE's persisted angle. */
 public class DrumRenderer extends KineticBlockEntityRenderer<DrumBlockEntity> {
 
     private static final Direction MODEL_AXIS = Direction.EAST;
@@ -36,7 +37,9 @@ public class DrumRenderer extends KineticBlockEntityRenderer<DrumBlockEntity> {
         RenderType type = getRenderType(be, state);
         Axis axis = getRotationAxisOf(be);
         Direction facing = Direction.fromAxisAndDirection(axis, AxisDirection.POSITIVE);
-        SuperByteBuffer model = CachedBuffers.partialDirectional(AllPartialModels.DRUM, state, facing, () -> {
+        float angleRad = AngleHelper.rad(be.getAngle(partialTicks));
+
+        SuperByteBuffer drum = CachedBuffers.partialDirectional(AllPartialModels.DRUM, state, facing, () -> {
             PoseStack stack = new PoseStack();
             TransformStack.of(stack)
                     .center()
@@ -44,7 +47,13 @@ public class DrumRenderer extends KineticBlockEntityRenderer<DrumBlockEntity> {
                     .uncenter();
             return stack;
         });
-        kineticRotationTransform(model, be, axis, AngleHelper.rad(be.getAngle(partialTicks)), light)
+        kineticRotationTransform(drum, be, axis, angleRad, light)
                 .renderInto(ms, buffer.getBuffer(type));
+
+        for (Direction end : Iterate.directionsInAxis(axis)) {
+            SuperByteBuffer cog = CachedBuffers.partialFacingVertical(AllPartialModels.SLIM_COGWHEEL, state, end);
+            kineticRotationTransform(cog, be, axis, angleRad, light)
+                    .renderInto(ms, buffer.getBuffer(RenderType.solid()));
+        }
     }
 }

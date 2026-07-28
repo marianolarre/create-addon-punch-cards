@@ -11,6 +11,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
+import org.jetbrains.annotations.Nullable;
+
 /**
  * Block entity for the computer kinetic block. Extending KineticBlockEntity ties it
  * into the kinetic network as a consumer.
@@ -22,6 +24,26 @@ public class ComputerBlockEntity extends KineticBlockEntity {
 
     public ComputerBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
+    }
+
+    /** Drum directly above, if any. Used only for visual slim-cog sync. */
+    @Nullable
+    public DrumBlockEntity getDrumAbove() {
+        if (level == null)
+            return null;
+        return level.getBlockEntity(worldPosition.above()) instanceof DrumBlockEntity drum ? drum : null;
+    }
+
+    /** Half-tooth phase so the reversed computer cog meshes with the drum cog (45° tooth pitch). */
+    private static final float SLIM_COG_MESH_OFFSET = 22.5f;
+
+    /**
+     * Slim cog angle in degrees. Tracks the drum above when present (reversed + mesh offset);
+     * otherwise 0. Does not use computer shaft speed (visual-only, drum-driven).
+     */
+    public float getSlimCogAngle(float partialTicks) {
+        DrumBlockEntity drum = getDrumAbove();
+        return drum == null ? 0f : -drum.getAngle(partialTicks) + SLIM_COG_MESH_OFFSET;
     }
 
     @Override

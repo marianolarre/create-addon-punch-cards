@@ -14,12 +14,12 @@ public final class DrumComputerKinetics {
     }
 
     /**
-     * Create {@code propagateRotationTo} factor: {@code computerSpeed * ratio == signedTarget}.
+     * Create {@code propagateRotationTo} factor: {@code computerSpeed * ratio == +|target|}.
+     * Drum always spins the same direction; only presence of power (non-zero computer speed) matters.
      */
     public static float speedRatioFromComputer(float computerSpeed, float targetRpmMagnitude) {
         if (Mth.equal(computerSpeed, 0))
             return 0f;
-        float signedTarget = Math.copySign(Math.abs(targetRpmMagnitude), computerSpeed);
-        return signedTarget / computerSpeed;
+        return Math.abs(targetRpmMagnitude) / computerSpeed;
     }
 }
